@@ -3,13 +3,20 @@
   vertical-align: top;
   position: relative;
   padding: 18px 22px 22px;
-  width: 280px;
-  margin: 0 8px;
+  min-width: 100%;
+  margin: 18px 0;
   box-sizing: border-box;
   border-radius: 8px;
   background-color: white;
   background-clip: padding-box;
   transition: 0.1s;
+}
+
+@media (min-width: 955px) {
+  .card {
+    min-width: 280px;
+    margin: 0 8px;
+  }
 }
 
 .card:first-child,
