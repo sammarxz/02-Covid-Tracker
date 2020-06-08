@@ -16,7 +16,7 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
   dataItems[2].name = 'deaths';
 
   return (
-    <div className={styles.container}>
+    <div className="d--flex j--spaceBetween f--wrap w--100">
       {dataItems.map((item) => (
         <div key={item.name} className={cx(styles.card, styles[item.name])}>
           <img

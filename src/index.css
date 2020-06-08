@@ -24,7 +24,7 @@ img {
 
 :root {
   --primary: #007ee5;
-  --lightGray: #7b8994;
+  --lightGray: #aab3ba;
   --baseline: 1.5rem;
 
   --red: #EE3C3C;
@@ -48,8 +48,37 @@ body {
   flex-direction: column;
   max-width: 1080px;
   margin:0 auto;
+  padding: 0 5%;
+}
+
+.d--flex {
+  display: flex;
+}
+
+.a--center {
+  align-items: center;
+}
+
+.j--spaceBetween {
+  justify-content: space-between
+}
+
+.f--wrap {
+  flex-wrap: wrap;
 }
 
 .fw--bold {
   font-weight: bold;
+}
+
+.w--100 {
+  width: 100%;
+}
+
+.mtb--40 {
+  margin: 40px 0;
+}
+
+.c--lightGray {
+  color: var(--lightGray);
 }
