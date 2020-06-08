@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  margin: 40px 0;
+}
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 18px 22px 22px;
+  width: 280px;
+  margin: 0 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  background-clip: padding-box;
+  transition: 0.1s;
+}
+
+.cardTitle {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.cardValue {
+  font-size: 2rem;
+}
+
+.cardIcon {
+  margin-bottom: 12%;
+}
+
+.infected {
+  background-color: var(--lightYellow);
+  color: var(--yellow);
+}
+
+.recovered {
+  background-color: var(--lightGreen);
+  color: var(--green);
+}
+
+.deaths {
+  background-color: var(--lightRed);
+  color: var(--red);
+}
