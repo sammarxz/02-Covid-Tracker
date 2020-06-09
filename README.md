@@ -11,8 +11,8 @@ Apart from react and chartjs, I also used:
 
 ### How to use
 ```
-$ git clone git@github.com:sammarxz/01-React-Currency-Converter.git
-$ cd 01-React-Currency-Converter
+$ git clone git@github.com:sammarxz/02-Covid-Tracker.git
+$ cd 02-Covid-Tracker.git
 $ npm install
 $ yarn start
 ```
