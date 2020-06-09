@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const CountryPicker = (props) => <div>countrypicker</div>;
+const CountryPicker = () => {
+  return (
+    <div>countrypicker</div>;
+  )
+}
 
 export default CountryPicker;

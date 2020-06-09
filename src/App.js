@@ -33,6 +33,7 @@ class App extends Component {
           </p>
         </header>
         <Cards data={data} />
+        <Chart />
       </div>
     );
   }
