@@ -7,7 +7,7 @@ import styles from './Chart.module.css';
 
 defaults.global.legend.display = false;
 
-const Chart = (props) => {
+const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Chart = (props) => {
     };
 
     fetchAPI();
-  });
+  }, []);
 
   const lineChart = dailyData.length ? (
     <Line
@@ -40,9 +40,29 @@ const Chart = (props) => {
     />
   ) : null;
 
+  const barChart = confirmed ? (
+    <Bar
+      data={{
+        labels: ['Infected', 'Recovered', 'Deaths'],
+        datasets: [
+          {
+            label: 'People',
+            backgroundColor: [
+              'rgba(255, 162, 0, .1)',
+              'rgba(52, 198, 53, .1)',
+              'rgba(238, 60, 60, .1)',
+            ],
+            data: [confirmed.value, recovered.value, deaths.value],
+          },
+        ],
+      }}
+      options={{ legend: { display: false } }}
+    />
+  ) : null;
+
   return (
     <div className={`${styles.container} d--flex j--center w--100`}>
-      {lineChart}
+      {country ? barChart : lineChart}
     </div>
   );
 };

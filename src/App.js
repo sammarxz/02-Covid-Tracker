@@ -8,16 +8,28 @@ import styles from "./App.module.css";
 class App extends Component {
   state = {
     data: {},
+    country: "",
   };
 
   async componentDidMount() {
-    const fetchedData = await fetchData();
-
-    this.setState({ data: fetchedData });
+    this.setFetchedData();
   }
 
+  handleCountryChange = async (country) => {
+    this.setFetchedData(country);
+  };
+
+  setFetchedData = async (country) => {
+    const fetchedData = await fetchData(country || "");
+
+    this.setState({
+      data: fetchedData,
+      country,
+    });
+  };
+
   render() {
-    const { data } = this.state;
+    const { data, country } = this.state;
 
     return (
       <div className="container">
@@ -33,7 +45,8 @@ class App extends Component {
           </p>
         </header>
         <Cards data={data} />
-        <Chart />
+        <CountryPicker handleCountryChange={this.handleCountryChange} />
+        <Chart data={data} country={country} />
       </div>
     );
   }
