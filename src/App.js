@@ -36,7 +36,7 @@ class App extends Component {
         <header
           className={`${styles.header} d--flex a--center j--spaceBetween f--wrap w--100 mtb--40`}
         >
-          <h1>Covid Tracker</h1>
+          <h1>COVID-19 Tracker</h1>
           <p className="c--lightGray">
             Last update on{" "}
             <span className="fw--bold">
