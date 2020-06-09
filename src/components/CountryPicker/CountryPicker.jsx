@@ -16,12 +16,13 @@ const CountryPicker = ({ handleCountryChange }) => {
   }, [setFetchedCountries]);
 
   return (
-    <div className={styles.picker}>
+    <div>
       <select
         onChange={(e) => handleCountryChange(e.target.value)}
         defaultValue="global"
+        className={styles.picker}
       >
-        <option value="global">Global</option>
+        <option value="">Global</option>
         {fetchedCountries.map((country) => (
           <option key={country} value={country}>
             {country}

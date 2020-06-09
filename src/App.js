@@ -45,7 +45,12 @@ class App extends Component {
           </p>
         </header>
         <Cards data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
+        <div
+          className={`${styles.picker} d--flex a--center j--spaceBetween f--wrap w--100 mtb--40`}
+        >
+          <h2>Cases:</h2>
+          <CountryPicker handleCountryChange={this.handleCountryChange} />
+        </div>
         <Chart data={data} country={country} />
       </div>
     );

@@ -41,6 +41,20 @@ body {
   color: #3D464D;
 }
 
+select {
+  background: #fff;
+  border: .05rem solid var(--lightGray);
+  border-radius: .3rem;
+  color: inherit;
+  font-size: .8rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  outline: 0;
+  padding: .25rem .4rem;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .container {
   display: flex;
   align-items: center;
