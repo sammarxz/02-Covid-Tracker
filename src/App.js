@@ -49,7 +49,10 @@ class App extends Component {
           className={`${styles.picker} d--flex a--center j--spaceBetween f--wrap w--100 mtb--40`}
         >
           <h2>Cases:</h2>
-          <CountryPicker handleCountryChange={this.handleCountryChange} />
+          <CountryPicker
+            handleCountryChange={this.handleCountryChange}
+            country={country}
+          />
         </div>
         <Chart data={data} country={country} />
       </div>
